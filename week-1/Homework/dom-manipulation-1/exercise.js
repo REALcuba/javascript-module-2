@@ -15,8 +15,19 @@ Write JavaScript below that logs:
     --> should log a list of nodes with a length of 3
 
 */
+let allP = document.querySelectorAll("p");
+if (allP.length = 6){
+console.log(allP)
+}
+let firstDiv = document.querySelector("div.site-header");
 
+let jumboTronText = querySelector('#jumbotron-text');
+console.log(jumboTronText);
 
+let pElementsInside = querySelectorAll(".primary-content > p");
+if(pElementsInside.length = 3){
+    console.log(pElementsInside);
+}
 /*
 Task 2
 ======
