@@ -47,6 +47,10 @@ Write JavaScript below that changes the background colour of the page when the '
 */
 
 
+let myBody = document.querySelector("body");
+ changeBody =()=>{myBody.style.backgroundColor = "red"};
+let colorBtnClicked = document.querySelector("#bgrChangeBtn");
+colorBtnClicked.addEventListener("click", changeBody)
 /*
 Task 4
 ======
