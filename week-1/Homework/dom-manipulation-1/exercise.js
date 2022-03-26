@@ -21,10 +21,10 @@ console.log(allP)
 }
 let firstDiv = document.querySelector("div.site-header");
 
-let jumboTronText = querySelector('#jumbotron-text');
+let jumboTronText = document.querySelector('#jumbotron-text');
 console.log(jumboTronText);
 
-let pElementsInside = querySelectorAll(".primary-content > p");
+let pElementsInside = document.querySelectorAll(".primary-content > p");
 if(pElementsInside.length = 3){
     console.log(pElementsInside);
 }
@@ -34,6 +34,9 @@ Task 2
 
 When a user clicks the 'ALERT' button, an alert box should pop up with the text "Thanks for visiting Bikes for Refugees!"
 */
+
+let myAlertBtn = document.querySelector("#alertBtn");
+myAlertBtn.addEventListener("click", () => alert("Thanks for visiting Bikes for Refugees!"));
 
 
 /*
