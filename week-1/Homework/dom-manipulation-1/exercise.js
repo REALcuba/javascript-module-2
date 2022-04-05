@@ -15,15 +15,20 @@ Write JavaScript below that logs:
     --> should log a list of nodes with a length of 3
 
 */
-let allP = document.querySelectorAll("p");
+// task 1.1
+let allP = Array.from(document.querySelectorAll("p"));
+
 if (allP.length = 6){
 console.log(allP)
 }
+// task 1.2
 let firstDiv = document.querySelector("div.site-header");
 
+// task 1.3
 let jumboTronText = document.querySelector('#jumbotron-text');
 console.log(jumboTronText);
 
+// task 1.4
 let pElementsInside = document.querySelectorAll(".primary-content > p");
 if(pElementsInside.length = 3){
     console.log(pElementsInside);
@@ -73,14 +78,16 @@ Task 5
 
 When the 'Larger links!' button is clicked, the text of all links on the page should increase.
 */
-let arr = Array.from(document.querySelectorAll("a"))
-const getLinkToLarge = (arr) =>{
-    let largedLink = arr.style.fontSize = "3em";
-   return largedLink;
+let textOfLinks = document.querySelectorAll("a");
+console.log(textOfLinks);
+function largeLink  () {
+    textOfLinks.style
+
 }
-console.log(getLinkToLarge());
-let addArticleBtn = document.querySelector("#largerLinksBtn")
-addArticleBtn.addEventListener("click", getLinkToLarge)
+
+let largerLink = document.querySelector('#largerLinksBtn');
+largerLink.addEventListener("click", largeLink)
+
 /*
 Task 6
 ======
@@ -89,6 +96,14 @@ Using the same function in Task 4,
 When the 'Add' button is clicked, get the text inside the input field and create a new paragraph in the "LEARN MORE" section
 Also clear the text inside the input field
 */
+function createP () {
+ 
+    let paragraph = document.createElement("p")
+    addArticleBtn.appendChild(paragraph)
+    paragraph.innerText = "LEARN MORE"
+};
+let addBtn = document.querySelector("#addArticleBtn");
+addBtn.addEventListener("click", createP)
 
 /*
 Task 7
@@ -98,4 +113,9 @@ Create an array of 5 different colors.
 Using the same function in Task 3, every time the 'Change colour' button is clicked, the background color will be changed with the next color in the array.
 The next color when you are in the last color of the array will be the first color again.
 */
+let arrColors = ["red","green", "blue", "orange", "pink"];
 
+let myBodyColors = document.querySelector("body");
+ changeBody =()=>{myBody.style.backgroundColor = "red"};
+let colorBtnClick = document.querySelector("#bgrChangeBtn");
+colorBtnClick.addEventListener("click", changeBody)

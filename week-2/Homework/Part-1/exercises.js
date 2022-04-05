@@ -8,6 +8,9 @@
  * All of your HTML should go inside the Div tag with the id "content".
  *
  * <div id="content">
+ * </div>
+
+* <div id="content">
  *      <h1>{Name Here}</h1>
  *      <h2>{Job Here}</h2>
  *      .....
@@ -15,7 +18,21 @@
  */
 function exerciseOne(arrayOfPeople) {
   let content = document.querySelector("#content");
+    arrayOfPeople.forEach((person)=> {
+  
+    let h1 = document.createElement("h1")
+      h1.innerText = person.name;
+      content.appendChild(h1);
+
+  let h2 = document.createElement('h2');
+     h2.innerText = person.job;
+     content.appendChild(h2)
+    
+  });
+  
 }
+
+
 
 /**
  *
@@ -26,6 +43,18 @@ function exerciseOne(arrayOfPeople) {
  */
 function exerciseTwo(shopping) {
   //Write your code in here
+  
+    let content =document.querySelector("#content")
+   let ul = document.createElement("ul");
+   content.appendChild(ul)
+
+   shopping.forEach(item => { 
+   let li = document.createElement("li");
+   ul.appendChild(li)
+   li.innerText = item
+  })
+   
+  
 }
 
 /**
@@ -59,6 +88,29 @@ function exerciseTwo(shopping) {
 **/
 function exerciseThree(books) {
   //Write your code in here
+  let content = document.querySelector("#content")
+  let ul = document.createElement("ul")
+      content.appendChild(ul)
+  books.forEach(
+    book => {
+      
+
+      let li = document.createElement("li")
+      
+      ul.appendChild(li)
+
+      let p = document.createElement("p")
+      li.appendChild(p)
+       p.innerText = `${book.title} : ${book.author}`
+       
+      
+   
+      
+     
+     
+    }
+  )
+  
 }
 
 //
