@@ -102,15 +102,32 @@ function exerciseThree(books) {
       let p = document.createElement("p")
       li.appendChild(p)
        p.innerText = `${book.title} : ${book.author}`
+      
+       let img = document.createElement("img")
+       content.appendChild(img)
+       img.classList.add("img")
+
+
        
-      
-   
-      
-     
-     
+       const booksBackgroundimg = [
+     {
+       url: "https://th.bing.com/th/id/OIP.XvKafuriO00wPRJL5dekpwHaJx?pid=ImgDet&rs=1"
+     },
+     {
+       url:"https://www.kurzweilai.net/images/themosthumanhuman.jpg"
+     },
+     {
+      url:"https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/tpp20.jpg"
+     },
+    ]
+     img.style.backgroundImage =`${booksBackgroundimg.url}`
+      //  booksimg.forEach(bookurl => {img.style.backgroundImage =`${bookurl.url}`})
+    
     }
-  )
-  
+
+   )
+
+   
 }
 
 //
@@ -139,17 +156,20 @@ const books = [
   {
     title: "The Design of Everyday Things",
     author: "Don Norman",
-    alreadyRead: false
+    alreadyRead: false,
+    
   },
   {
     title: "The Most Human Human",
     author: "Brian Christian",
-    alreadyRead: true
+    alreadyRead: true,
+   
   },
   {
     title: "The Pragmatic Programmer",
     author: "Andrew Hunt",
-    alreadyRead: true
+    alreadyRead: true,
+   
   }
 ];
 
