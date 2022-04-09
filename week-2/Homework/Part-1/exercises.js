@@ -97,8 +97,10 @@ function exerciseThree(books) {
 
     let li = document.createElement("li")
       ul.appendChild(li)
-      li.classList.add('img')
-      li.style.backgroundImage = `${book.url}`
+      const img = document.createElement("img")
+      li.appendChild(img)
+      // li.classList.add('img')
+      img.src = `${book.url}`
     let p = document.createElement("p")
       li.appendChild(p)
       
