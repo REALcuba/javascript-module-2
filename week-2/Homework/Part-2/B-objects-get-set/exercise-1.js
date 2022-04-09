@@ -10,5 +10,7 @@ var kitten = {
 
 // YOUR CODE HERE
 
-
-kitten.forEach(kitty => {console.log(kitty)} )
+function printKitten(arr) {
+    return console.log(arr);
+}
+printKitten(kitten);
