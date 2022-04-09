@@ -104,12 +104,9 @@ function exerciseThree(books) {
        p.innerText = `${book.title} : ${book.author}`
        
       
-   
-      
-     
-     
     }
   )
+  
   
 }
 
