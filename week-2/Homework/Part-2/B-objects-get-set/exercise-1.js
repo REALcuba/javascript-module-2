@@ -10,3 +10,5 @@ var kitten = {
 
 // YOUR CODE HERE
 
+
+kitten.forEach(kitty => {console.log(kitty)} )
