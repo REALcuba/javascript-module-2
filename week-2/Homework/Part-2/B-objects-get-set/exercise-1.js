@@ -14,3 +14,7 @@ function printKitten(arr) {
     return console.log(arr);
 }
 printKitten(kitten);
+
+console.log(kitten.ageMonths);
+console.log(kitten.isFemale);
+console.log(kitten.furColour);

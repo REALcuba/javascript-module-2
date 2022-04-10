@@ -113,13 +113,12 @@ function exerciseThree(books) {
        //create img element
     const img = document.createElement("img")
       li.appendChild(img)
+      // booksBackgroundimgUrlArr["url"]
       img.src = `${book.url}`
       img.width= (240)
       img.height= (250)
       
-      // li.addEventListener("click", ()=>{
-      //   li.style.backgroundColor = "green"
-      // })
+     // add li > eventListener
       li.addEventListener("click", ()=>{
         if(li.style.backgroundColor === "red") {
           li.style.backgroundColor = "green"
@@ -128,12 +127,6 @@ function exerciseThree(books) {
         }
       })
       
-  
-      //  if(!isReadEl) {
-      //    ul.style.color = "red";
-      //  }else {
-      //    isReadEl()
-      //  }
     //    const booksBackgroundimgUrlArr = [
     //  {
     //    url: "https://th.bing.com/th/id/OIP.XvKafuriO00wPRJL5dekpwHaJx?pid=ImgDet&rs=1"
@@ -145,15 +138,10 @@ function exerciseThree(books) {
     //   url:"https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/tpp20.jpg"
     //  },
     // ]
-    // const backgroundImage =() => {style.backgroundImage = `${bookurl.url}`}
-    //  img.style.backgroundImage =`${backgroundImage}`
-      //  booksimg.forEach(bookurl => {img.style.backgroundImage =`${bookurl.url}`})
     
     }
 
    )
-
-   
 }
 
 //
@@ -183,6 +171,7 @@ const books = [
     title: "The Design of Everyday Things",
     author: "Don Norman",
     alreadyRead: false,
+    // to be deleted
     url: "https://th.bing.com/th/id/OIP.XvKafuriO00wPRJL5dekpwHaJx?pid=ImgDet&rs=1"
     
   },
@@ -190,12 +179,14 @@ const books = [
     title: "The Most Human Human",
     author: "Brian Christian",
     alreadyRead: true,
+     // to be deleted
    url:"https://www.kurzweilai.net/images/themosthumanhuman.jpg"
   },
   {
     title: "The Pragmatic Programmer",
     author: "Andrew Hunt",
     alreadyRead: true,
+     // to be deleted
    url:"https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/tpp20.jpg"
   }
 ];
