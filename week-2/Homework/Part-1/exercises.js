@@ -91,28 +91,50 @@ function exerciseThree(books) {
   let content = document.querySelector("#content")
   let ul = document.createElement("ul")
       content.appendChild(ul)
+      
+      
   books.forEach(
     book => {
-      
-
+      //create li element
     let li = document.createElement("li")
       ul.appendChild(li)
-      const img = document.createElement("img")
-      li.appendChild(img)
-      // li.classList.add('img')
-      img.src = `${book.url}`
+      ul.style
+      ul.style.display = "inline-flex"
+      li.style.margin = (10)
+      li.style.padding = (10)
+      li.style.backgroundColor = "red"
+      li.style.listStyle = "none"
+
+      // create p element
     let p = document.createElement("p")
-      li.appendChild(p)
+      li.appendChild(p) 
+      p.innerText = `${book.title} : ${book.author}`
+    
+       //create img element
+    const img = document.createElement("img")
+      li.appendChild(img)
+      img.src = `${book.url}`
+      img.width= (240)
+      img.height= (250)
       
-
+      // li.addEventListener("click", ()=>{
+      //   li.style.backgroundColor = "green"
+      // })
+      li.addEventListener("click", ()=>{
+        if(li.style.backgroundColor === "red") {
+          li.style.backgroundColor = "green"
+        }else {
+          li.style.backgroundColor = "red"
+        }
+      })
       
-       
-      
-       
-p.innerText = `${book.title} : ${book.author}`
-
-       
-    //    const booksBackgroundimgarr = [
+  
+      //  if(!isReadEl) {
+      //    ul.style.color = "red";
+      //  }else {
+      //    isReadEl()
+      //  }
+    //    const booksBackgroundimgUrlArr = [
     //  {
     //    url: "https://th.bing.com/th/id/OIP.XvKafuriO00wPRJL5dekpwHaJx?pid=ImgDet&rs=1"
     //  },
