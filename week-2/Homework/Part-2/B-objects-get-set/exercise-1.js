@@ -10,7 +10,7 @@ var kitten = {
 
 // YOUR CODE HERE
 
-function printKitten(arr) {
-    return console.log(arr);
+function printKitten(ageMonths,isFemale, furColour) {
+    return console.log(ageMonths,isFemale, furColour);
 }
 printKitten(kitten);

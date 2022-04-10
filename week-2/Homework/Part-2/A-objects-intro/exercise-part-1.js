@@ -17,3 +17,23 @@ var car = {
 
 */
 
+let mobile ={
+    brand: iphone
+};
+
+let house = {
+rooms:3
+};
+
+let skates = {
+    brand:RollerBlade
+}
+
+let language ={
+    writeLevel: "higth",
+   
+};
+
+let school = {
+    classes: 9
+}
