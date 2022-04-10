@@ -40,9 +40,17 @@ WRITE YOUR CODE BELOW
 */
 
 
-let destinationNamesWithin500Kms = // Complete here
+let destinationNamesWithin500Kms = travelDestinations.filter(destination => {
+    if(destination["distanceKms"] <= 500) {
+        return destination["destinationName"]
+    }
+})// Complete here
 
-let destinationNameReachableByFerry = // Complete here
+let destinationNameReachableByFerry =  travelDestinations.filter(ferry =>{
+    if (ferry.transportations === "ferry") {
+     return ferry.destinationName
+    }
+})// Complete here
 
 let destinationNamesMoreThan300KmsAwayByTrain = // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
 
