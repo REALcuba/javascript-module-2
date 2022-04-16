@@ -61,13 +61,8 @@ const changeBody =()=>{
     }
     };
 let colorBtnClicked = document.querySelector("#bgrChangeBtn");
-
-
  colorBtnClicked.addEventListener("click", changeBody)
-// let myBodyColors = document.querySelector("body");
-//  changeBody =()=>{myBody.style.backgroundColor = "red"};
-// let colorBtnClick = document.querySelector("#bgrChangeBtn");
-// colorBtnClick.addEventListener("click", changeBody)
+
 /*
 Task 4
 ======
@@ -75,10 +70,12 @@ Task 4
 When a user clicks the ‘Add some text’ button, a new paragraph should be added inside the section that says “LEARN MORE”
 */
 function createP () {
- 
-    let paragraph = document.createElement("p")
-      addTextBtn.appendChild(paragraph)
-    paragraph.innerText = "LEARN MORE"
+ const mainArticles = document.querySelector("#mainArticles")
+    let newParagraph = document.createElement("p")
+    newParagraph.id = "newParagraph"
+   mainArticles.appendChild(newParagraph)
+    newParagraph.innerText = "LEARN MORE"
+   
 };
 let addTextBtn = document.querySelector("#addTextBtn");
 addTextBtn.addEventListener("click", createP)
@@ -108,14 +105,14 @@ Using the same function in Task 4,
 When the 'Add' button is clicked, get the text inside the input field and create a new paragraph in the "LEARN MORE" section
 Also clear the text inside the input field
 */
-function createP () {
+// function createP () {
  
-    let paragraph = document.createElement("p")
-    addArticleBtn.appendChild(paragraph)
-    paragraph.innerText = "LEARN MORE"
-};
-let addBtn = document.querySelector("#addArticleBtn");
-addBtn.addEventListener("click", createP)
+//     let paragraph = document.createElement("p")
+//     addArticleBtn.appendChild(paragraph)
+//     paragraph.innerText = "LEARN MORE"
+// };
+// let addBtn = document.querySelector("#addArticleBtn");
+// addBtn.addEventListener("click", createP)
 
 /*
 Task 7
