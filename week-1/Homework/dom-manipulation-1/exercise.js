@@ -51,11 +51,23 @@ Task 3
 Write JavaScript below that changes the background colour of the page when the 'Change colour' button is clicked.
 */
 
+const changeBody =()=>{
+ const myBody = document.querySelector("body")
 
-let myBody = document.querySelector("body");
- changeBody =()=>{myBody.style.backgroundColor = "red"};
+    if(myBody.style.backgroundColor === "white"){
+        myBody.style.backgroundColor = "red";
+    }else {
+        myBody.style.backgroundColor = "white";
+    }
+    };
 let colorBtnClicked = document.querySelector("#bgrChangeBtn");
-colorBtnClicked.addEventListener("click", changeBody)
+
+
+ colorBtnClicked.addEventListener("click", changeBody)
+// let myBodyColors = document.querySelector("body");
+//  changeBody =()=>{myBody.style.backgroundColor = "red"};
+// let colorBtnClick = document.querySelector("#bgrChangeBtn");
+// colorBtnClick.addEventListener("click", changeBody)
 /*
 Task 4
 ======
@@ -115,7 +127,7 @@ The next color when you are in the last color of the array will be the first col
 */
 let arrColors = ["red","green", "blue", "orange", "pink"];
 
-let myBodyColors = document.querySelector("body");
- changeBody =()=>{myBody.style.backgroundColor = "red"};
-let colorBtnClick = document.querySelector("#bgrChangeBtn");
-colorBtnClick.addEventListener("click", changeBody)
+// let myBodyColors = document.querySelector("body");
+//  changeBody =()=>{myBody.style.backgroundColor = "red"};
+// let colorBtnClick = document.querySelector("#bgrChangeBtn");
+// colorBtnClick.addEventListener("click", changeBody)
