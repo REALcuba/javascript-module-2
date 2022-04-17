@@ -87,15 +87,18 @@ Task 5
 
 When the 'Larger links!' button is clicked, the text of all links on the page should increase.
 */
-let textOfLinks = document.querySelectorAll("a");
-console.log(textOfLinks);
+
 function largeLink  () {
-    textOfLinks.style
+     const getLargeLink = document.querySelectorAll("a")
+     for ( var i = 0; i < getLargeLink.length; i ++ ) {
+    getLargeLink[i].style.fontSize = "2em";
+};
+   
 
 }
 
-let largerLink = document.querySelector('#largerLinksBtn');
-largerLink.addEventListener("click", largeLink)
+let largerLinkButton = document.getElementById('largerLinksBtn');
+largerLinkButton.addEventListener("click", largeLink)
 
 /*
 Task 6
