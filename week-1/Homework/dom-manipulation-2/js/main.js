@@ -2,11 +2,16 @@
 
 const createFuntionButtonBlue = () => {
   const jumbotron = document.querySelector(".jumbotron")
-  const blueBtn = document.getElementById("blueBtn")
-  const btnPrimary = document.querySelector(".btn-lrg")
+  const orangeBtn = document.getElementById("orangeBtn")
+  const greenBtn = document.getElementById("greenBtn")
 
+  const btnPrimary = document.querySelector(".btn-lrg")
   const btnSecondary = document.querySelector(".btn-secondary")
   blueBtn.addEventListener("click", () => changeColorsBlueBtn())
+  orangeBtn.addEventListener("click", () => changeColorsOrangeBtn())
+  greenBtn.addEventListener("click", () => changeColorsGreenBtn())
+
+
 
 
   function changeColorsBlueBtn() {
@@ -17,8 +22,19 @@ const createFuntionButtonBlue = () => {
 
   }
 
-  return blueBtn
+  function changeColorsOrangeBtn() {
+    jumbotron.style.backgroundColor = "#f0ad4e";
+    btnPrimary.style.backgroundColor = "#5751fd";
+    btnSecondary.style.backgroundColor = "#31b0d5";
+    btnSecondary.style.color = "white";
 
+  } function changeColorsGreenBtn() {
+    jumbotron.style.backgroundColor = "#87ca8a";
+    btnPrimary.style.backgroundColor = "black";
+    btnSecondary.style.backgroundColor = "#8c9c08";
+    // btnSecondary.style.color = "white";
+
+  }
 }
 
 
