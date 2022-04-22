@@ -1,6 +1,6 @@
 //create function to change blue Button background
 
-const createFuntionButtonBlue = () => {
+const createFuntionColorsButton = () => {
   const jumbotron = document.querySelector(".jumbotron")
   const orangeBtn = document.getElementById("orangeBtn")
   const greenBtn = document.getElementById("greenBtn")
@@ -38,6 +38,7 @@ const createFuntionButtonBlue = () => {
 }
 
 
+//part 2
 
 
 
@@ -48,4 +49,4 @@ const createFuntionButtonBlue = () => {
 
 
 
-createFuntionButtonBlue()
+createFuntionColorsButton()
