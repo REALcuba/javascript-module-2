@@ -90,11 +90,11 @@ When the 'Larger links!' button is clicked, the text of all links on the page sh
 
 function largeLink  () {
      const getLargeLink = document.querySelectorAll("a")
+     if(getLargeLink){
      for ( var i = 0; i < getLargeLink.length; i ++ ) {
     getLargeLink[i].style.fontSize = "2em";
-};
-   
-
+     };
+   }
 }
 
 let largerLinkButton = document.getElementById('largerLinksBtn');
@@ -108,14 +108,16 @@ Using the same function in Task 4,
 When the 'Add' button is clicked, get the text inside the input field and create a new paragraph in the "LEARN MORE" section
 Also clear the text inside the input field
 */
-// function createP () {
- 
-//     let paragraph = document.createElement("p")
-//     addArticleBtn.appendChild(paragraph)
-//     paragraph.innerText = "LEARN MORE"
-// };
-// let addBtn = document.querySelector("#addArticleBtn");
-// addBtn.addEventListener("click", createP)
+
+   function getInputValue() {
+       const inputValue = document.querySelector(".form-control").value;
+      createP(newParagraph.innerText = inputValue)
+   }
+  
+
+
+ let addBtn = document.querySelector("#addArticleBtn");
+ addBtn.addEventListener("click", getInputValue)
 
 /*
 Task 7
