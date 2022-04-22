@@ -40,6 +40,13 @@ const createFuntionColorsButton = () => {
 
 //part 2
 
+function validateSubmit() {
+  const submitBtn = document.getElementById("submitBtn")
+
+  submitBtn.addEventListener("click", () => {
+    console.log("potato")
+  })
+}
 
 
 
@@ -48,5 +55,5 @@ const createFuntionColorsButton = () => {
 
 
 
-
+validateSubmit()
 createFuntionColorsButton()
