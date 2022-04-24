@@ -43,9 +43,21 @@ const createFuntionColorsButton = () => {
 function validateSubmit() {
   const submitBtn = document.getElementById("submitBtn")
 
-  submitBtn.addEventListener("click", () => {
-    console.log("potato")
+  submitBtn.addEventListener("click", (event) => {
+    event.preventDefault()
+    const emailInputEl = document.getElementById("exampleInputEmail1")
+    const inputValue = emailInputEl.value
+
+    if (inputValue.length === 0) {
+      emailInputEl.style.backgroundColor = "red";
+      console.log("porta")
+    }
+
+
   })
+
+
+
 }
 
 
