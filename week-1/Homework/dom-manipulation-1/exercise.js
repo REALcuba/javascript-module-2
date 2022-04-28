@@ -18,8 +18,8 @@ Write JavaScript below that logs:
 // task 1.1
 let allP = Array.from(document.querySelectorAll("p"));
 
-if (allP.length = 6){
-console.log(allP)
+if (allP.length = 6) {
+    console.log(allP)
 }
 // task 1.2
 let firstDiv = document.querySelector("div.site-header");
@@ -30,7 +30,7 @@ console.log(jumboTronText);
 
 // task 1.4
 let pElementsInside = document.querySelectorAll(".primary-content > p");
-if(pElementsInside.length = 3){
+if (pElementsInside.length = 3) {
     console.log(pElementsInside);
 }
 /*
@@ -51,17 +51,13 @@ Task 3
 Write JavaScript below that changes the background colour of the page when the 'Change colour' button is clicked.
 */
 
-const changeBody =()=>{
- const myBody = document.querySelector("body")
+const changeBody = (arr) => {
+    const myBody = document.querySelector("body")
+    myBody.style.backgroundColor = arr;
 
-    if(myBody.style.backgroundColor === "white"){
-        myBody.style.backgroundColor = "red";
-    }else {
-        myBody.style.backgroundColor = "white";
-    }
-    };
+};
 let colorBtnClicked = document.querySelector("#bgrChangeBtn");
- colorBtnClicked.addEventListener("click", changeBody)
+colorBtnClicked.addEventListener("click", moreColors)
 
 /*
 Task 4
@@ -69,13 +65,13 @@ Task 4
 
 When a user clicks the ‘Add some text’ button, a new paragraph should be added inside the section that says “LEARN MORE”
 */
-function createP () {
- const mainArticles = document.getElementById("mainArticles")
+function createP() {
+    const mainArticles = document.getElementById("mainArticles")
     let newParagraph = document.createElement("p")
     newParagraph.id = "newParagraph"
     mainArticles.appendChild(newParagraph)
     newParagraph.innerText = "LEARN MORE"
-   
+
 };
 let addTextBtn = document.querySelector("#addTextBtn");
 addTextBtn.addEventListener("click", createP)
@@ -88,13 +84,13 @@ Task 5
 When the 'Larger links!' button is clicked, the text of all links on the page should increase.
 */
 
-function largeLink  () {
-     const getLargeLink = document.querySelectorAll("a")
-     if(getLargeLink){
-     for ( var i = 0; i < getLargeLink.length; i ++ ) {
-    getLargeLink[i].style.fontSize = "2em";
-     };
-   }
+function largeLink() {
+    const getLargeLink = document.querySelectorAll("a")
+    if (getLargeLink) {
+        for (var i = 0; i < getLargeLink.length; i++) {
+            getLargeLink[i].style.fontSize = "2em";
+        };
+    }
 }
 
 let largerLinkButton = document.getElementById('largerLinksBtn');
@@ -109,15 +105,15 @@ When the 'Add' button is clicked, get the text inside the input field and create
 Also clear the text inside the input field
 */
 
-   function getInputValue() {
-       const inputValue = document.querySelector(".form-control").value;
-      createP(newParagraph.innerText = inputValue)
-   }
-  
+function getInputValue() {
+    const inputValue = document.querySelector(".form-control").value;
+    return createP(inputValue)
+}
 
 
- let addBtn = document.querySelector("#addArticleBtn");
- addBtn.addEventListener("click", getInputValue)
+
+let addBtn = document.querySelector("#addArticleBtn");
+addBtn.addEventListener("click", getInputValue)
 
 /*
 Task 7
@@ -127,9 +123,30 @@ Create an array of 5 different colors.
 Using the same function in Task 3, every time the 'Change colour' button is clicked, the background color will be changed with the next color in the array.
 The next color when you are in the last color of the array will be the first color again.
 */
-let arrColors = ["red","green", "blue", "orange", "pink"];
+let arrColors = ["red", "green", "blue", "orange", "pink"];
+function moreColors() {
 
+    let arr = arrColors.map(color => {
+        // colors.forEach(color => {
+        //     console.log(color);
+        changeBody(color)
+        // })
+
+    });
+    return arr
+}
+
+
+
+
+
+
+// changeBodyColors(arrColors)
+
+// changeBody(arrColors)
 // let myBodyColors = document.querySelector("body");
 //  changeBody =()=>{myBody.style.backgroundColor = "red"};
 // let colorBtnClick = document.querySelector("#bgrChangeBtn");
 // colorBtnClick.addEventListener("click", changeBody)
+
+
