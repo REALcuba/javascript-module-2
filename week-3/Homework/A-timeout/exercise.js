@@ -11,15 +11,32 @@ Update your code to make the colour change every 5 seconds to something differen
 */
 
 function setBackgroundColor() {
-    setTimeout(setColor(), 5000);
+    setTimeout(setColor, 5000);
 
     function setColor() {
         const bodyColor = document.getElementById("main")
         bodyColor.style.backgroundColor = "red"
-    }
 
+        // if (bodyColor.style.backgroundColor === "red") {
+        setInterval(setColor2, 5000);
+
+        function setColor2() {
+            const bodyColor = document.getElementById("main")
+            bodyColor.style.backgroundColor = "red" ? "pink" : "blue";
+
+            // }
+        }
+    }
 }
-function myStopFunction() {
-    clearTimeout(setBackgroundColor);
-}
+
+
+
+// function myStopFunction() {
+//     clearTimeout(setBackgroundColor);
+// }
+
+
+// function stopColor() {
+//     clearInterval(setBackgroundColor);
+// }
 setBackgroundColor()
