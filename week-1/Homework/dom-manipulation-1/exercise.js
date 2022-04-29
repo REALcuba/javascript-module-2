@@ -51,9 +51,9 @@ Task 3
 Write JavaScript below that changes the background colour of the page when the 'Change colour' button is clicked.
 */
 
-const changeBody = (arr) => {
+const changeBody = (color) => {
     const myBody = document.querySelector("body")
-    myBody.style.backgroundColor = arr;
+    myBody.style.backgroundColor = color;
 
 };
 let colorBtnClicked = document.querySelector("#bgrChangeBtn");
@@ -129,11 +129,17 @@ The next color when you are in the last color of the array will be the first col
 */
 let arrColors = ["red", "green", "blue", "orange", "pink"];
 function moreColors() {
-
-
     let setColor = arrColors[0]
-
+    // if (setColor < arrColors.length) {
+    // let i = 0
+    console.log(setColor);
     changeBody(setColor)
+    // if (arrColors.length) {
+    console.log(setColor++)
+    // }
+    return
+    // }
+
 
 
 
