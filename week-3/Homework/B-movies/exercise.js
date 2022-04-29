@@ -61,25 +61,15 @@ var movies = [
 // create showMovies function
 const showMovies = () => {
   const all_movies = document.getElementById("all-movies")
-
+  const movies_number = document.getElementById("movies-number")
+  movies_number.innerHTML = movies.length
   movies.forEach(movie => {
     const movieDetailsDiv = document.createElement("div")
-
-    // `<div id = "moviesDetailsDiv"></div>`
     all_movies.appendChild(movieDetailsDiv)
     movieDetailsDiv.innerHTML = `<p>${movie.title}</p>` + `${movie.director}`
-    console.log(movie.title);
-    console.log(movie.director);
+
   });
-  // const moviesArr = movies.map(() => console.log("potato"))
-  // moviesArr.forEach(movie => {
-  //   console.log(movie)
-  //   
-  //     
-  //   console.log("potato");
-  //   all_movies.appendchild(movieDetailsDiv)
-  //   
-  // })
+
 }
 
 // create a new movie object for your favorite movie
