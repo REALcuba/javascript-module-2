@@ -60,19 +60,25 @@ var movies = [
 
 // create showMovies function
 const showMovies = () => {
-  console.log(movies);
-  movies.forEach(element => {
-    console.log(element.title);
-    console.log(element.director);
+  const all_movies = document.getElementById("all-movies")
+
+  movies.forEach(movie => {
+    const movieDetailsDiv = document.createElement("div")
+
+    // `<div id = "moviesDetailsDiv"></div>`
+    all_movies.appendChild(movieDetailsDiv)
+    movieDetailsDiv.innerHTML = `<p>${movie.title}</p>` + `${movie.director}`
+    console.log(movie.title);
+    console.log(movie.director);
   });
   // const moviesArr = movies.map(() => console.log("potato"))
   // moviesArr.forEach(movie => {
   //   console.log(movie)
-  //   const all_movies = document.getElementById("all-movies")
-  //     `<div id = "moviesDetailsDiv"></div>`
+  //   
+  //     
   //   console.log("potato");
   //   all_movies.appendchild(movieDetailsDiv)
-  //   movieDetailsDiv.innerHTML = `<p>${movies.title}</p>` + `${movies.director}`
+  //   
   // })
 }
 
