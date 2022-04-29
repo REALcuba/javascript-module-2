@@ -130,15 +130,11 @@ The next color when you are in the last color of the array will be the first col
 let arrColors = ["red", "green", "blue", "orange", "pink"];
 function moreColors() {
 
-    let arr = arrColors.forEach(color, i => {
-        console.log(color);
 
+    let setColor = arrColors[0]
 
-        // changeBody(color)
-        console.log(changeBody(color));
-    })
+    changeBody(setColor)
 
-    return changeBody(arr)
 
 
 }
