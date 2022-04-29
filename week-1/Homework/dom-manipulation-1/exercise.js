@@ -70,7 +70,7 @@ function createP() {
     let newParagraph = document.createElement("p")
     newParagraph.id = "newParagraph"
     mainArticles.appendChild(newParagraph)
-    newParagraph.innerText = "LEARN MORE"
+    newParagraph.innerText = getInputValue();
 
 };
 let addTextBtn = document.querySelector("#addTextBtn");
@@ -106,14 +106,18 @@ Also clear the text inside the input field
 */
 
 function getInputValue() {
+    ;
     const inputValue = document.querySelector(".form-control").value;
-    return createP(inputValue)
+    // inputValue.value = "";
+    document.querySelector(".form-control").value = ''
+    return inputValue
+
 }
 
 
 
 let addBtn = document.querySelector("#addArticleBtn");
-addBtn.addEventListener("click", getInputValue)
+addBtn.addEventListener("click", createP)
 
 /*
 Task 7
@@ -126,27 +130,19 @@ The next color when you are in the last color of the array will be the first col
 let arrColors = ["red", "green", "blue", "orange", "pink"];
 function moreColors() {
 
-    let arr = arrColors.map(color => {
-        // colors.forEach(color => {
-        //     console.log(color);
-        changeBody(color)
-        // })
+    let arr = arrColors.forEach(color, i => {
+        console.log(color);
 
-    });
-    return arr
+
+        // changeBody(color)
+        console.log(changeBody(color));
+    })
+
+    return changeBody(arr)
+
+
 }
 
 
-
-
-
-
-// changeBodyColors(arrColors)
-
-// changeBody(arrColors)
-// let myBodyColors = document.querySelector("body");
-//  changeBody =()=>{myBody.style.backgroundColor = "red"};
-// let colorBtnClick = document.querySelector("#bgrChangeBtn");
-// colorBtnClick.addEventListener("click", changeBody)
 
 
