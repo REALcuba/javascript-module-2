@@ -66,7 +66,7 @@ const showMovies = () => {
   movies.forEach(movie => {
     const movieDetailsDiv = document.createElement("div")
     all_movies.appendChild(movieDetailsDiv)
-    movieDetailsDiv.innerHTML = `<p>${movie.title}</p>` + `${movie.director}`
+    movieDetailsDiv.innerHTML = `<p>Title: ${movie.title}</p>` + ` <p>Director: ${movie.director}</p>`
 
   });
 
