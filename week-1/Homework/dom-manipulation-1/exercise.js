@@ -131,36 +131,16 @@ let arrColors = ["red", "green", "blue", "orange", "pink"];
 let i = 0
 function moreColors() {
     let setColor = arrColors[i]
-    console.log(setColor);
-    if (i < arrColors.length) {
-        console.log(i);
+    if (i <= arrColors.length) {
+
         changeBody(setColor)
         i++
+        if (i > arrColors.length - 1) {
+            i = 0
+            setColor = arrColors[i]
 
-    } else if (i === arrColors.length) {
-        console.log(i);
-        i = 0
-        setColor = arrColors[i]
-
-        changeBody(setColor)
-
-
+        }
     }
-
-    // console.log(setColor);
-    // changeBody(setColor)
-    // i++
-    // if (setColor >= arrColors.length - 1) {
-    //     return i = 0
-    // }
-
-    // if (arrColors.length) {
-
-    //
-    // return setColor++
-    // }
-
-
 
 
 }
