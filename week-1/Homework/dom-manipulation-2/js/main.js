@@ -45,13 +45,23 @@ function validateSubmit() {
 
   submitBtn.addEventListener("click", (event) => {
     event.preventDefault()
-    const emailInputEl = document.getElementById("exampleInputEmail1")
-    const inputValue = emailInputEl.value
+    const inputEl = document.querySelectorAll(".form-control")
+    inputEl.forEach(inputEl => {
+      const inputValue = inputEl.value
+      if (!inputValue) {
+        console.log(inputValue);
+        inputEl.style.backgroundColor = "red";
+      }
+      console.log(inputValue);
 
-    if (inputValue.length === 0) {
-      emailInputEl.style.backgroundColor = "red";
-      console.log("porta")
-    }
+
+
+
+
+    })
+
+
+
 
 
   })
