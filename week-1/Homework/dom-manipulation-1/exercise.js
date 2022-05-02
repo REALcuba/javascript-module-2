@@ -128,16 +128,36 @@ Using the same function in Task 3, every time the 'Change colour' button is clic
 The next color when you are in the last color of the array will be the first color again.
 */
 let arrColors = ["red", "green", "blue", "orange", "pink"];
+let i = 0
 function moreColors() {
-    let setColor = arrColors[0]
-    // if (setColor < arrColors.length) {
-    // let i = 0
+    let setColor = arrColors[i]
     console.log(setColor);
-    changeBody(setColor)
-    // if (arrColors.length) {
-    console.log(setColor++)
+    if (i < arrColors.length) {
+        console.log(i);
+        changeBody(setColor)
+        i++
+
+    } else if (i === arrColors.length) {
+        console.log(i);
+        i = 0
+        setColor = arrColors[i]
+
+        changeBody(setColor)
+
+
+    }
+
+    // console.log(setColor);
+    // changeBody(setColor)
+    // i++
+    // if (setColor >= arrColors.length - 1) {
+    //     return i = 0
     // }
-    return
+
+    // if (arrColors.length) {
+
+    //
+    // return setColor++
     // }
 
 
