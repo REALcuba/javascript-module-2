@@ -18,20 +18,20 @@ Write JavaScript below that logs:
 // task 1.1
 let allP = Array.from(document.querySelectorAll("p"));
 
-if (allP.length = 6) {
-    console.log(allP)
+if ((allP.length = 6)) {
+  console.log(allP);
 }
 // task 1.2
 let firstDiv = document.querySelector("div.site-header");
 
 // task 1.3
-let jumboTronText = document.querySelector('#jumbotron-text');
+let jumboTronText = document.querySelector("#jumbotron-text");
 console.log(jumboTronText);
 
 // task 1.4
 let pElementsInside = document.querySelectorAll(".primary-content > p");
-if (pElementsInside.length = 3) {
-    console.log(pElementsInside);
+if ((pElementsInside.length = 3)) {
+  console.log(pElementsInside);
 }
 /*
 Task 2
@@ -41,8 +41,9 @@ When a user clicks the 'ALERT' button, an alert box should pop up with the text 
 */
 
 let myAlertBtn = document.querySelector("#alertBtn");
-myAlertBtn.addEventListener("click", () => alert("Thanks for visiting Bikes for Refugees!"));
-
+myAlertBtn.addEventListener("click", () =>
+  alert("Thanks for visiting Bikes for Refugees!")
+);
 
 /*
 Task 3
@@ -52,12 +53,11 @@ Write JavaScript below that changes the background colour of the page when the '
 */
 
 const changeBody = (color) => {
-    const myBody = document.querySelector("body")
-    myBody.style.backgroundColor = color;
-
+  const myBody = document.querySelector("body");
+  myBody.style.backgroundColor = color;
 };
 let colorBtnClicked = document.querySelector("#bgrChangeBtn");
-colorBtnClicked.addEventListener("click", moreColors)
+colorBtnClicked.addEventListener("click", moreColors);
 
 /*
 Task 4
@@ -66,16 +66,14 @@ Task 4
 When a user clicks the ‘Add some text’ button, a new paragraph should be added inside the section that says “LEARN MORE”
 */
 function createP() {
-    const mainArticles = document.getElementById("mainArticles")
-    let newParagraph = document.createElement("p")
-    newParagraph.id = "newParagraph"
-    mainArticles.appendChild(newParagraph)
-    newParagraph.innerText = getInputValue();
-
-};
+  const mainArticles = document.getElementById("mainArticles");
+  let newParagraph = document.createElement("p");
+  newParagraph.id = "newParagraph";
+  mainArticles.appendChild(newParagraph);
+  newParagraph.innerText = getInputValue();
+}
 let addTextBtn = document.querySelector("#addTextBtn");
-addTextBtn.addEventListener("click", createP)
-
+addTextBtn.addEventListener("click", createP);
 
 /*
 Task 5
@@ -85,16 +83,16 @@ When the 'Larger links!' button is clicked, the text of all links on the page sh
 */
 
 function largeLink() {
-    const getLargeLink = document.querySelectorAll("a")
-    if (getLargeLink) {
-        for (var i = 0; i < getLargeLink.length; i++) {
-            getLargeLink[i].style.fontSize = "2em";
-        };
+  const getLargeLink = document.querySelectorAll("a");
+  if (getLargeLink) {
+    for (var i = 0; i < getLargeLink.length; i++) {
+      getLargeLink[i].style.fontSize = "2em";
     }
+  }
 }
 
-let largerLinkButton = document.getElementById('largerLinksBtn');
-largerLinkButton.addEventListener("click", largeLink)
+let largerLinkButton = document.getElementById("largerLinksBtn");
+largerLinkButton.addEventListener("click", largeLink);
 
 /*
 Task 6
@@ -106,18 +104,14 @@ Also clear the text inside the input field
 */
 
 function getInputValue() {
-    ;
-    const inputValue = document.querySelector(".form-control").value;
-    // inputValue.value = "";
-    document.querySelector(".form-control").value = ''
-    return inputValue
-
+  const inputValue = document.querySelector(".form-control").value;
+  // inputValue.value = "";
+  document.querySelector(".form-control").value = "";
+  return inputValue;
 }
 
-
-
 let addBtn = document.querySelector("#addArticleBtn");
-addBtn.addEventListener("click", createP)
+addBtn.addEventListener("click", createP);
 
 /*
 Task 7
@@ -128,23 +122,16 @@ Using the same function in Task 3, every time the 'Change colour' button is clic
 The next color when you are in the last color of the array will be the first color again.
 */
 let arrColors = ["red", "green", "blue", "orange", "pink"];
-function moreColors() {
-    let setColor = arrColors[0]
-    // if (setColor < arrColors.length) {
-    // let i = 0
-    console.log(setColor);
-    changeBody(setColor)
-    // if (arrColors.length) {
-    console.log(setColor++)
-    // }
-    return
-    // }
-
-
-
-
+function moreColors(color, index) {
+  let setColor = 0;
+  let currentColor = arrColors[setColor];
+  // if (setColor < arrColors.length) {
+  let i = 0;
+  console.log(setColor);
+  changeBody(currentColor);
+  // if (arrColors.length) {
+  console.log(setColor++);
+  // }
+  return setColor++;
+  // }
 }
-
-
-
-
