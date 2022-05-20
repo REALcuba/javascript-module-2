@@ -50,8 +50,8 @@ function validateSubmit() {
     }
 
     if (
-      inputValue.length === 0 &&
-      textValue.length === 0 &&
+      inputValue.length === 0 ||
+      textValue.length === 0 ||
       describeValue.length === 0
     ) {
       emailInputEl.style.backgroundColor = "red";
@@ -59,6 +59,10 @@ function validateSubmit() {
       describeAreaEl.style.backgroundColor = "red";
     } else {
       alert("thanks for submit");
+      emailInputEl.value = "";
+      textInputEl.value = "";
+      describeAreaEl.value = "";
+
       emailInputEl.style.backgroundColor = "";
       textInputEl.style.backgroundColor = "";
       describeAreaEl.style.backgroundColor = "";
