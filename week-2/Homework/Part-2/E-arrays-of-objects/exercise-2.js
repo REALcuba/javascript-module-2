@@ -38,21 +38,26 @@ let travelDestinations = [destination1, destination2, destination3, destination4
 DO NOT EDIT ANYTHING ABOVE THIS LINE
 WRITE YOUR CODE BELOW
 */
+const getDestinationWithin500kms = (travelDestination) => {
+    return travelDestination.filter(destiny => destiny.distanceKms <= 500).map(destiny => destiny.destinationName)
+}
+let destinationNamesWithin500Kms = getDestinationWithin500kms(travelDestinations)
 
 
-let destinationNamesWithin500Kms = travelDestinations.filter(destination => {
-    if(destination["distanceKms"] <= 500) {
-        return destination["destinationName"]
+
+// Complete here
+
+let destinationNameReachableByFerry = travelDestinations.filter(destiny => {
+    if (destiny.transportations.includes("ferry")) {
+        return true
     }
-})// Complete here
+}).map(destiny => destiny.destinationName)// Complete here
 
-let destinationNameReachableByFerry =  travelDestinations.filter(ferry =>{
-    if (ferry.transportations === "ferry") {
-     return ferry.destinationName
+let destinationNamesMoreThan300KmsAwayByTrain = travelDestinations.forEach(train => {
+    if (train.transportations === train && train["distanceKms"] >= 300) {
+        console.log(train.destinationName);
     }
-})// Complete here
-
-let destinationNamesMoreThan300KmsAwayByTrain = // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
+}) // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
 
 
 /*

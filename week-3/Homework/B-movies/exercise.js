@@ -63,13 +63,21 @@ const showMovies = () => {
   const all_movies = document.getElementById("all-movies")
   const movies_number = document.getElementById("movies-number")
   movies_number.innerHTML = movies.length
-  movies.forEach(movie => {
-    const movieDetailsDiv = document.createElement("div")
-    all_movies.appendChild(movieDetailsDiv)
-    movieDetailsDiv.innerHTML = `<p>Title: ${movie.title}</p>` + ` <p>Director: ${movie.director}</p>`
 
+  movies.forEach((movie) => {
+
+    showMovieDatail(movie)
   });
 
+
+  function showMovieDatail(movie) {
+    setTimeout(() => {
+      const movieDetailsDiv = document.createElement("div")
+      all_movies.appendChild(movieDetailsDiv)
+      movieDetailsDiv.innerHTML = `<p>Title: ${movie.title}</p>` + ` <p>Director: ${movie.director}</p>`
+    }, 1000)
+
+  }
 }
 
 // create a new movie object for your favorite movie
@@ -77,7 +85,9 @@ const showMovies = () => {
 
 // create addMovies function
 
+function addMovies(params) {
 
+}
 
 
 
