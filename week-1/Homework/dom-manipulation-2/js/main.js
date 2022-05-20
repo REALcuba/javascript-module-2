@@ -59,6 +59,9 @@ function validateSubmit() {
       describeAreaEl.style.backgroundColor = "red";
     } else {
       alert("thanks for submit");
+      emailInputEl.style.backgroundColor = "";
+      textInputEl.style.backgroundColor = "";
+      describeAreaEl.style.backgroundColor = "";
     }
   });
 }
