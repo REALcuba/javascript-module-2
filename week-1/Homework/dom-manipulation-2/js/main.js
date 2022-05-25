@@ -45,20 +45,29 @@ function validateSubmit() {
 
   submitBtn.addEventListener("click", (event) => {
     event.preventDefault()
-    const inputEl = document.querySelectorAll(".form-control")
-    inputEl.forEach(inputEl => {
-      const inputValue = inputEl.value
-      if (!inputValue) {
-        console.log(inputValue);
-        inputEl.style.backgroundColor = "red";
+    const inputEls = document.querySelectorAll(".form-control")
+    const emailEl = document.getElementById("exampleInputEmail1")
+
+
+    const inputValue = inputEls.value
+    console.log(inputValue);
+    if (!inputValue) {
+      if (!emailEl.value.includes("@")) {
+        alert(
+          "email should contain @"
+        )
+        return inputEls.style.backgroundColor = "red";
       }
-      console.log(inputValue);
+
+
+      inputEls.backgroundColor = "red";
+    }
+    // console.log(inputValue);
 
 
 
 
 
-    })
 
 
 
@@ -68,14 +77,15 @@ function validateSubmit() {
 
 
 
+
 }
 
 
 
 
-
-
-
-
 validateSubmit()
+
+
+
+
 createFuntionColorsButton()
