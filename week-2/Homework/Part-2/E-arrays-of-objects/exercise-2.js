@@ -51,13 +51,18 @@ let destinationNameReachableByFerry = travelDestinations.filter(destiny => {
     if (destiny.transportations.includes("ferry")) {
         return true
     }
-}).map(destiny => destiny.destinationName)// Complete here
+}).map(destiny => destiny.destinationName)
+// Complete here
 
-let destinationNamesMoreThan300KmsAwayByTrain = travelDestinations.forEach(train => {
-    if (train.transportations === train && train["distanceKms"] >= 300) {
-        console.log(train.destinationName);
+
+
+let destinationNamesMoreThan300KmsAwayByTrain = travelDestinations.map(destiny => {
+    if (destiny.transportations.includes("train") && destiny.distanceKms > 300) {
+        return destiny.destinationName;
     }
-}) // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
+
+})
+// Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
 
 
 /*
