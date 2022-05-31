@@ -56,9 +56,13 @@ let destinationNameReachableByFerry = travelDestinations.filter(destiny => {
 
 
 
-let destinationNamesMoreThan300KmsAwayByTrain = travelDestinations.map(destiny => {
+let destinationNamesMoreThan300KmsAwayByTrain = [];
+travelDestinations.forEach(destiny => {
+
     if (destiny.transportations.includes("train") && destiny.distanceKms > 300) {
-        return destiny.destinationName;
+
+        console.log(destiny);
+        destinationNamesMoreThan300KmsAwayByTrain.push(destiny.destinationName);
     }
 
 })
